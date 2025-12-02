@@ -1,0 +1,61 @@
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5em;
+    }
+    
+    .career-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        font-size: 2.2em;
+    }
+    
+    .section-title {
+        font-size: 1.8em;
+    }
+    
+    .landing-page {
+        min-height: 100vh;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .career-page {
+        padding: 20px;
+    }
+    
+    .content-section {
+        padding: 20px 10px;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        max-width: 95%;
+    }
+    
+    .controls-info {
+        padding: 10px;
+    }
+}
+

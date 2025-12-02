@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snigdha Mishra - Synthwave Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">Now Entering the Matrix</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-subtitle">Please wait while the portfolio loads...</div>
+        </div>
+        <div id="loading-error" class="loading-error" style="display:none;">
+            <div class="error-content">
+                <h2>Loading Timeout</h2>
+                <p>Sorry, something went wrong loading the portfolio.</p>
+                <button onclick="location.reload()">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing" class="landing-page">
+        <div id="background-3d" class="background-3d"></div>
+        <div class="synthwave-grid"></div>
+        <div class="neon-glow"></div>
+      <div id="main" class="header-info">
+        <div class="header-main">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="images/Profile.jpeg" alt="Snigdha Mishra" />
+                </div>
+                <div class="profile-ring"></div>
+            </div>
+            <div class="name-title">
+                <h1 class="name">SNIGDHA MISHRA</h1>
+                <p class="subtitle">FULL-STACK DEVELOPER • DATA SCIENTIST</p>
+                <p class="tagline">// Navigating the Digital Frontier //</p>
+            </div>
+        </div>
+    </div>
+        <div class="career-buttons">
+            <button class="career-btn neon-btn" onclick="showCareerPage('software')">
+                <span>SOFTWARE DEVELOPER</span>
+            </button>
+            <button class="career-btn neon-btn data-science" onclick="showCareerPage('data-science')">
+                <span>DATA SCIENCE</span>
+            </button>
+        </div>
+        <div id="explore-button" class="explore-scroll-button">
+            <div class="explore-text">Scroll for Complete Profile</div>
+            <div class="explore-arrow">↓</div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Software Developer Page -->
+    <div id="software-page" class="career-page">
+        <div class="synthwave-bg"></div>
+       <div id="content" class="header-info">
+       </div>
+
+        <div class="page-header">
+            <a href="javascript:void(0)" onclick="goToHome()" class="home-nav-link">← Home</a>
+            <h1 class="page-title">SOFTWARE DEVELOPER</h1>
+            <p class="page-subtitle">Building Digital Experiences • Full-Stack Mastery • Mobile Innovation</p>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">WORK EXPERIENCE</h2>
+                <div class="timeline-grid">
+                    <div class="timeline-item neon-card" onclick="showModal('work', 0, 'software')">
+                        <div class="item-header">
+                            <h3>Course Instructor</h3>
+                            <p class="company">iCode West Frisco</p>
+                            <p class="date">Feb 2025 - Present</p>
+                        </div>
+                        <div class="item-description">
+                            Teaching programming, web development, and mentoring <span class="highlight">50+ students</span> across multiple tech courses including React, Python, and game development.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 1, 'software')">
+                        <div class="item-header">
+                            <h3>Full-Stack Software Engineer</h3>
+                            <p class="company">Freelancing</p>
+                            <p class="date">Aug 2023 - Apr 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Developed scalable applications using React.js and Flutter, reducing query response time by <span class="highlight">20%</span> and improving performance optimization.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 2, 'software')">
+                        <div class="item-header">
+                            <h3>Multimedia Design Assistant</h3>
+                            <p class="company">University of Texas at Dallas</p>
+                            <p class="date">Mar 2023 - May 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Web testing, workflow automation, and multimedia content management, improving efficiency by <span class="highlight">10%</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">FEATURED PROJECTS</h2>
+                <div class="projects-grid">
+                    <div class="project-card neon-card" onclick="showModal('project', 0)">
+                        <div class="project-icon"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                        <h3>Pocket Closet</h3>
+                        <p>AI-Powered Mobile App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 1)">
+                        <div class="project-icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+                        <h3>Bulked Nutrition App</h3>
+                        <p>Cross-Platform Nutrition App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 5)">
+                        <div class="project-icon"><ion-icon name="bar-chart-outline"></ion-icon></div>
+                        <h3>Crossed Social Media App</h3>
+                        <p>Cross-Platform Analytics</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">APIs</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 2)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>Attendance Gamification</h3>
+                        <p>Interactive Web Platform</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skills-category neon-card">
+                        <h3>Software Development</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Expo</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe Creative Suite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <div class="about-row">
+                    <div class="info-card neon-card">
+                        <h3>Contact</h3>
+                        <div class="contact-item"><ion-icon name="mail-outline"></ion-icon> snigdhaxmishragmail.com</div>
+                        <div class="contact-item"><ion-icon name="briefcase-outline"></ion-icon> <a href="https://linkedin.com/in/snigdhamishra" style="color: var(--neon-cyan);">LinkedIn Profile</a></div>
+                        <div class="contact-item"><ion-icon name="phone-portrait-outline"></ion-icon> Available for opportunities</div>
+                    </div>
+                    <div class="info-card neon-card">
+                        <h3>Education</h3>
+                        <div class="contact-item"><ion-icon name="school-outline"></ion-icon> University of Texas at Dallas</div>
+                        <div class="contact-item"><ion-icon name="library-outline"></ion-icon> B.S. Computer Science</div>
+                        <div class="contact-item"><ion-icon name="trophy-outline"></ion-icon> Relevant Coursework</div>
+                    </div>
+                    <div class="info-card neon-card">
+                        <h3>Summary</h3>
+                        <div class="contact-item"><ion-icon name="rocket-outline"></ion-icon> Full-stack developer passionate about building innovative digital experiences</div>
+                        <div class="contact-item"><ion-icon name="bulb-outline"></ion-icon> Experience in React, Flutter, and modern web technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Science Page -->
+    <div id="data-science-page" class="career-page">
+        <div class="synthwave-bg"></div>
+        <div id="content" class="header-info">
+       </div>
+        
+        <div class="page-header">
+            <a href="javascript:void(0)" onclick="goToHome()" class="home-nav-link">← Home</a>
+            <h1 class="page-title data-science">DATA SCIENCE</h1>
+            <p class="page-subtitle">Healthcare Analytics • Machine Learning • Statistical Analysis</p>
+        </div>
+        
+        <div class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">WORK EXPERIENCE</h2>
+                <div class="timeline-grid">
+                    <div class="timeline-item neon-card" onclick="showModal('work', 0, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Healthcare Data Scientist</h3>
+                            <p class="company">TruBridge</p>
+                            <p class="date">Jun 2025 - Aug 2025</p>
+                        </div>
+                        <div class="item-description">
+                            Analyzed <span class="highlight">10,000+ healthcare records</span>, built predictive models achieving <span class="highlight">88% accuracy</span> across 15+ demographic segments.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 1, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Healthcare Data Scientist</h3>
+                            <p class="company">Ascendion</p>
+                            <p class="date">Jun 2025 - Aug 2025</p>
+                        </div>
+                        <div class="item-description">
+                            Designed ML pipelines processing <span class="highlight">50,000+ data points</span> daily, achieved <span class="highlight">92% accuracy</span> in medical entity recognition.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 2, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Data Science Specialist</h3>
+                            <p class="company">UT Austin & Great Learning</p>
+                            <p class="date">Feb 2024 - Oct 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Analyzed <span class="highlight">15+ enterprise datasets</span>, built models with <span class="highlight">85%+ accuracy</span>, improved conversion rates by <span class="highlight">15%</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">RESEARCH PROJECTS</h2>
+                <div class="projects-grid">
+                    <div class="project-card neon-card" onclick="showModal('project', 4)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>JP Morgan Data Analytics Program</h3>
+                        <p>Financial Analytics & ML</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Statistical Modeling</span>
+                            <span class="tech-tag">Financial Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 3)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>CNN Architecture Analysis</h3>
+                        <p>Computer Vision Research</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 0)">
+                        <div class="project-icon"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                        <h3>Pocket Closet</h3>
+                        <p>AI-Powered Mobile App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 1)">
+                        <div class="project-icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+                        <h3>Bulked Nutrition App</h3>
+                        <p>Cross-Platform Nutrition App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skills-category neon-card">
+                        <h3>Data Science</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Statistics</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">BERT</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">MLOps</span>
+                            <span class="skill-tag">Bayesian Optimization</span>
+                            <span class="skill-tag">t-SNE</span>
+                            <span class="skill-tag">TensorBoard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <div class="about-row">
+                    <div class="info-card neon-card">
+                        <h3>Contact</h3>
+                        <div class="contact-item"><ion-icon name="mail-outline"></ion-icon> snigdhaxmishra@gmail.com</div>
+                        <div class="contact-item"><ion-icon name="briefcase-outline"></ion-icon> <a href="https://linkedin.com/in/snigdhamishra" style="color: var(--neon-cyan);">LinkedIn Profile</a></div>
+                        <div class="contact-item"><ion-icon name="phone-portrait-outline"></ion-icon> Available for opportunities</div>
+                    </div>
+                    <div class="info-card neon-card">
+                        <h3>Education</h3>
+                        <div class="contact-item"><ion-icon name="school-outline"></ion-icon> University of Texas at Dallas</div>
+                        <div class="contact-item"><ion-icon name="library-outline"></ion-icon> B.S. Computer Science</div>
+                        <div class="contact-item"><ion-icon name="trophy-outline"></ion-icon> Data Science Specialization</div>
+                    </div>
+                    <div class="info-card neon-card">
+                        <h3>Summary</h3>
+                        <div class="contact-item"><ion-icon name="flask-outline"></ion-icon> Data scientist passionate about leveraging AI for healthcare impact</div>
+                        <div class="contact-item"><ion-icon name="bar-chart-outline"></ion-icon> Experience in ML, statistical analysis, and predictive modeling</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete Profile Content -->
+    <div id="complete-page" class="career-page active">
+        <div id="content" class="header-info">
+        </div>
+        <div id="complete-content" class="content-section">
+            <div class="synthwave-bg"></div>   
+                <div class="section-container">
+                    <h2 class="section-title">ALL TECHNICAL SKILLS</h2>
+                    <div class="skills-grid">
+                        <div class="skills-category neon-card">
+                            <h3>ALL TECHNICAL SKILLS</h3>
+                            <div class="skills-container">
+                                <!-- Software Development Skills -->
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">React Native</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Bootstrap</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Expo</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Adobe Creative Suite</span>
+                                <!-- Data Science Skills -->
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">NumPy</span>
+                                <span class="skill-tag">scikit-learn</span>
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Statistics</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">SciPy</span>
+                                <span class="skill-tag">Matplotlib</span>
+                                <span class="skill-tag">Seaborn</span>
+                                <span class="skill-tag">BERT</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">MLOps</span>
+                                <span class="skill-tag">Bayesian Optimization</span>
+                                <span class="skill-tag">Grid Search</span>
+                                <span class="skill-tag">t-SNE</span>
+                                <span class="skill-tag">TensorBoard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="about-row">
+                        <div class="info-card neon-card">
+                            <h3>Contact</h3>
+                            <div class="contact-item"><ion-icon name="mail-outline"></ion-icon> snigdhaxmishra@gmail.com</div>
+                            <div class="contact-item"><ion-icon name="briefcase-outline"></ion-icon> <a href="https://linkedin.com/in/snigdhamishra" style="color: var(--neon-cyan);">LinkedIn Profile</a></div>
+                            <div class="contact-item"><ion-icon name="phone-portrait-outline"></ion-icon> Available for opportunities</div>
+                        </div>
+                        <div class="info-card neon-card">
+                            <h3>Education</h3>
+                            <div class="contact-item"><ion-icon name="school-outline"></ion-icon> University of Texas at Dallas</div>
+                            <div class="contact-item"><ion-icon name="library-outline"></ion-icon> B.S. Computer Science</div>
+                            <div class="contact-item"><ion-icon name="trophy-outline"></ion-icon> Full-Stack & Data Science</div>
+                        </div>
+                        <div class="info-card neon-card">
+                            <h3>Summary</h3>
+                            <div class="contact-item"><ion-icon name="rocket-outline"></ion-icon> Full-stack developer and data scientist passionate about building innovative digital experiences</div>
+                            <div class="contact-item"><ion-icon name="bulb-outline"></ion-icon> Experienced in both web development and AI/ML applications</div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="section-container">
+                <h2 class="section-title">ALL WORK EXPERIENCE</h2>
+                <div class="timeline-grid">
+                    <div class="timeline-item neon-card" onclick="showModal('work', 0, 'software')">
+                        <div class="item-header">
+                            <h3>Course Instructor</h3>
+                            <p class="company">iCode West Frisco</p>
+                            <p class="date">Feb 2025 - Present</p>
+                        </div>
+                        <div class="item-description">
+                            Teaching programming, web development, and mentoring <span class="highlight">50+ students</span> across multiple tech courses including React, Python, and game development.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 1, 'software')">
+                        <div class="item-header">
+                            <h3>Full-Stack Software Engineer</h3>
+                            <p class="company">Freelancing</p>
+                            <p class="date">Aug 2023 - Apr 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Developed scalable applications using React.js and Flutter, reducing query response time by <span class="highlight">20%</span> and improving performance optimization.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 0, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Healthcare Data Scientist</h3>
+                            <p class="company">TruBridge</p>
+                            <p class="date">Jun 2025 - Aug 2025</p>
+                        </div>
+                        <div class="item-description">
+                            Analyzed <span class="highlight">10,000+ healthcare records</span>, built predictive models achieving <span class="highlight">88% accuracy</span> across 15+ demographic segments.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 1, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Healthcare Data Scientist</h3>
+                            <p class="company">Ascendion</p>
+                            <p class="date">Jun 2025 - Aug 2025</p>
+                        </div>
+                        <div class="item-description">
+                            Designed ML pipelines processing <span class="highlight">50,000+ data points</span> daily, achieved <span class="highlight">92% accuracy</span> in medical entity recognition.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 2, 'dataScience')">
+                        <div class="item-header">
+                            <h3>Data Science Specialist</h3>
+                            <p class="company">UT Austin & Great Learning</p>
+                            <p class="date">Feb 2024 - Oct 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Analyzed <span class="highlight">15+ enterprise datasets</span>, built models with <span class="highlight">85%+ accuracy</span>, improved conversion rates by <span class="highlight">15%</span>.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item neon-card" onclick="showModal('work', 2, 'software')">
+                        <div class="item-header">
+                            <h3>Multimedia Design Assistant</h3>
+                            <p class="company">University of Texas at Dallas</p>
+                            <p class="date">Mar 2023 - May 2024</p>
+                        </div>
+                        <div class="item-description">
+                            Web testing, workflow automation, and multimedia content management, improving efficiency by <span class="highlight">10%</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">ALL PROJECTS</h2>
+                <div class="projects-grid">
+                    <div class="project-card neon-card" onclick="showModal('project', 0)">
+                        <div class="project-icon"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                        <h3>Pocket Closet</h3>
+                        <p>AI-Powered Mobile App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 1)">
+                        <div class="project-icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+                        <h3>Bulked Nutrition App</h3>
+                        <p>Cross-Platform Nutrition App</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 2)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>Attendance Gamification</h3>
+                        <p>Interactive Web Platform</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 3)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>CNN Architecture Analysis</h3>
+                        <p>Computer Vision Research</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 4)">
+                        <div class="project-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                        <h3>JP Morgan Data Analytics Program</h3>
+                        <p>Financial Analytics & ML</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Statistical Modeling</span>
+                            <span class="tech-tag">Financial Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card neon-card" onclick="showModal('project', 5)">
+                        <div class="project-icon"><ion-icon name="bar-chart-outline"></ion-icon></div>
+                        <h3>Crossed Social Media App</h3>
+                        <p>Cross-Platform Analytics</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">APIs</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content neon-card">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Modular JavaScript Files -->
+    <script src="js/config/resumeData.js"></script>
+    <script src="js/ui/loading.js"></script>
+    <script src="js/ui/navigation.js"></script>
+    <script src="js/ui/modals.js"></script>
+    <script src="js/graphics/background3d.js"></script>
+    <script src="js/game/roadmap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

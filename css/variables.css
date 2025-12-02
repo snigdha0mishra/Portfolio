@@ -1,0 +1,15 @@
+/* CSS Variables - Synthwave Theme */
+:root {
+    --primary-bg: #0a0a0f;
+    --secondary-bg: #1a0a2e;
+    --accent-bg: #16213e;
+    --neon-cyan: #00ffff;
+    --neon-pink: #ff0080;
+    --neon-purple: #8a2be2;
+    --neon-blue: #00d4ff;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-accent: #00ffff;
+    --grid-color: rgba(0, 255, 255, 0.2);
+}
+

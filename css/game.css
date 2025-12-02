@@ -1,0 +1,314 @@
+/* Game Styles - 3D Roadmap Game */
+
+/* 3D Roadmap Section */
+.roadmap-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary-bg);
+    z-index: 2000;
+}
+
+.roadmap-section.active {
+    display: block;
+}
+
+#roadmap-container {
+    width: 100%;
+    height: 100%;
+}
+
+.roadmap-ui {
+    position: relative;
+}
+
+.exit-roadmap {
+    margin-bottom: 20px;
+}
+
+.controls-info {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 18px 24px;
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Game HUD */
+#game-hud {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4000;
+    background: rgba(10,10,20,0.85);
+    color: #fff;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4em;
+    padding: 18px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #00ffff, 0 0 10px #ff0080;
+    display: none;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+/* Game Controls Panel */
+.game-controls-panel {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    z-index: 4000;
+    background: rgba(10,10,20,0.95);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    font-size: 1em;
+    display: none;
+    min-width: 280px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), inset 0 0 20px rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.game-controls-panel h3 {
+    color: var(--neon-pink);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.control-key {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+    color: var(--primary-bg);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: none;
+}
+
+.control-desc {
+    color: var(--text-primary);
+    font-size: 0.95em;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Game Modals */
+.objectives-modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.objectives-modal-content {
+    position: relative;
+    margin: 10% auto;
+    max-width: 600px;
+    background: linear-gradient(45deg, #1a0a2e, #16213e);
+    border: 3px solid var(--neon-cyan);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+    animation: modalSlide 0.4s ease;
+}
+
+.objectives-modal h2 {
+    color: var(--neon-pink);
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-shadow: 0 0 15px var(--neon-pink);
+}
+
+.objective-list {
+    text-align: left;
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid var(--neon-cyan);
+}
+
+.objective-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.objective-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    min-width: 30px;
+}
+
+.start-game-btn {
+    background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+    border: none;
+    border-radius: 25px;
+    padding: 15px 40px;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.start-game-btn:hover {
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+    transform: scale(1.05);
+}
+
+/* Vehicle Modal */
+.vehicle-modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.vehicle-modal-content {
+    position: relative;
+    margin: 15% auto;
+    max-width: 500px;
+    background: linear-gradient(45deg, #1a0a2e, #16213e);
+    border: 3px solid var(--neon-cyan);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+    animation: modalSlide 0.4s ease;
+}
+
+.vehicle-modal h2 {
+    color: var(--neon-pink);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.vehicle-modal p {
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.close-vehicle-modal {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.close-vehicle-modal:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Experience Stack */
+.experience-stack {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5000;
+    display: none;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.experience-card {
+    background: linear-gradient(45deg, #1a0a2e, #16213e);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    position: relative;
+}
+
+.experience-card h3 {
+    color: var(--neon-pink);
+    margin-bottom: 10px;
+    font-family: 'Orbitron', monospace;
+}
+
+.experience-card .details {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.experience-card .type {
+    color: var(--neon-purple);
+    font-size: 0.9em;
+}
+
+.experience-nav {
+    display: none; /* Hidden as per user request - only X button shown */
+}
+
+.experience-nav button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.experience-nav button:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
